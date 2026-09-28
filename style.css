@@ -1,0 +1,319 @@
+:root {
+    --primary: #f9df36;
+    --accent: #f5b400;
+    --background: #f4f6f9;
+    --text: #000000;
+    --white: #d28484; 
+    --border: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 30px 0;
+}
+
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+section h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: var(--primary);
+}
+
+.hero {
+    max-width: none;
+    min-height: 450px;
+    margin: 0;
+    padding: 120px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #071536, #85b5fd, #d99b00);
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+button {
+    background-color: var(--accent);
+    color: #111111;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
+#about, #about-match, #matches, #mybookings {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about ul { padding-left: 25px; }
+#about li { margin: 8px 0; }
+
+#team {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #49e6f4;
+}
+
+.booking-grid {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 30px;
+    align-items: start;
+}
+
+.theme-box {
+    background-color: var(--white); 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    max-width: none;
+}
+
+.theme-box h2 {
+    color: var(--primary);
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.form-row label {
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+}
+
+.form-row input,
+.form-row select {
+    width: 150px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+    outline: 2px solid var(--primary);
+}
+
+.confirm-btn {
+    display: block;
+    margin: 30px auto 0;
+    background-color: var(--accent);
+    color: #000;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.summary-table table {
+    background-color: transparent;
+    margin-top: 0;
+}
+
+.summary-table th {
+    background-color: var(--primary);
+    color: #d28484; 
+    border: 1px solid #ffffff;
+    font-size: 16px;
+}
+
+.summary-table td {
+    border: 1px solid #ffffff;
+    color: #000;
+    background-color: transparent;
+}
+
+.summary-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#guidelines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#guidelines h2 {
+    grid-column: 1 / -1;
+}
+
+#guidelines article {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#guidelines article:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.toast-notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--primary);
+    color: var(--text);
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px 24px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out, visibility 0.3s;
+}
+
+.toast-notification.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+@media (max-width: 900px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+}
